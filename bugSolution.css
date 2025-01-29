@@ -1,0 +1,25 @@
+The following CSS code demonstrates a solution using a clearfix technique to prevent the unexpected behavior:
+
+```css
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+div {
+  width: 50%;
+  float: left;
+}
+
+/*Example Usage*/
+.container {
+  width: 200px;
+}
+.container > div {
+  background-color: lightblue;
+  height: 50px;
+}
+```
+
+Adding the `clearfix` class to the parent container ensures that the floated elements are properly contained, preventing the unexpected wrapping or collapsing.  Other methods such as using `overflow: auto;` or flexbox can also effectively achieve this.
