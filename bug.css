@@ -1,0 +1,10 @@
+The following CSS code snippet exhibits unexpected behavior in some browsers:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+The issue is that when the total width of the floated elements exceeds the container's width, some browsers might collapse or wrap the elements in unexpected ways. This is often due to the browser's handling of floating elements and their interaction with the normal document flow.  The behaviour may vary across different browsers and versions.
